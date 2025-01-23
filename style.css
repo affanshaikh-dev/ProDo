@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Funnel Display", sans-serif;
+}
+
+body {
+    background: whitesmoke;
+    padding: 0 25px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+
+.header .logo {
+    max-width: 120px;
+    width: 100%;
+}
+
+.header .logo img {
+    width: 100%;
+}
+
+.header .version h3 {
+    font-weight: 400;
+    font-size: 1.1em;
+    pointer-events: none;
+}
+
+.main {
+    display: block;
+    position: relative;
+}
+
+.main .TaskContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main .TaskContainer .inputContiainer {
+    flex: 1 1 250px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.main .TaskContainer .inputContiainer input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: .95em;
+    outline: none;
+}
+
+.main .TaskContainer .inputContiainer .btns {
+    padding: 15px 0 0;
+}
+
+.main .TaskContainer .inputContiainer .btns button {
+    padding: 8px 20px;
+    font-size: 1em;
+    border-radius: 20em;
+    border: none;
+    cursor: pointer;
+}
+
+.main .TaskContainer .inputContiainer .btns button.add {
+    background: purple;
+    color: #fff;
+}
+
+.main .TaskContainer .inputContiainer .btns button.clearAll {
+    background: rgba(128, 0, 128, 0.089);
+    color: purple;
+}
+
+.main .TaskContainer .TaskList {
+    flex: 1 1 700px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.main .TaskContainer .TaskList .btnsContainer {
+    padding: 0 0 20px;
+}
+
+.main .TaskContainer .TaskList .btnsContainer button {
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: none;
+    font-size: .95em;
+    background: rgba(128, 0, 128, 0.089);
+    color: purple;
+    cursor: pointer;
+}
+
+.main .TaskContainer .TaskList .btnsContainer button.active {
+    background: purple;
+    color: #fff;
+}
+
+.taskSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.taskSection li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: rgba(128, 0, 128, 0.041);
+    border-radius: 15px;
+    width: 100%;
+}
+
+.taskSection li .taskDetails {
+    display: flex;
+    gap: 10px;
+}
+
+.taskSection li .taskDetails input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid purple;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.taskSection li .taskDetails input[type="checkbox"]:checked {
+    background-color: purple;
+    border-color: purple;
+}
+
+.taskSection li .taskDetails input[type="checkbox"]:checked::after {
+    content: '✔'; 
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.taskSection img {
+    max-width: 700px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.taskSection .taskBtns {
+    display: flex;
+    gap: 8px;
+}
+
+.taskSection .taskBtns i {
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.taskSection .taskBtns i.edit {
+    border: 1px solid purple;
+    color: purple;
+}
+
+.taskSection .taskBtns i.close {
+    background: purple;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
